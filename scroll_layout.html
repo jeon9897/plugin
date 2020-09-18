@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>arctic_scroll 플러그인을 활용한 스크롤 레이아웃 구현</title>
+	<style>
+		*{margin:0px;padding:0px;}
+		a{
+			font-size:16px;
+			padding:5px 10px;
+			background-color:#07a8a8;
+			margin:0px 10px;text-decoration:none;color:#333;
+		}
+		header{
+			width:100%;height:60px;line-height:60px;
+			position:fixed;
+			top:0px;left:0px;
+			background-color:#ffff00;text-align:center;
+		}
+		section{margin-top:70px;background:#ccc;}
+		section > article{
+			width:1200px;margin:20px auto;
+			height:700px;
+			background-color:aquamarine;
+		}
+		footer{
+			width:100%;
+			line-height:50px;
+			background-color:#222;
+			color:#ccc;
+			text-align:center;
+		}
+	</style>
+<!--	제이쿼리 라이브러리 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- arctic sroll 플러그인 주소 연결-->
+<script src="./script/jquery.arctic_scroll.js"></script>
+</head>
+<body>
+		<header>
+			<a href="#c01" title="" class="arctic_scroll">menu01</a>	
+			<a href="#c02" title="" class="arctic_scroll">menu02</a>	
+			<a href="#c03" title="" class="arctic_scroll">menu03</a>	
+			<a href="#c04" title="" class="arctic_scroll">menu04</a>	
+			<a href="#c05" title="" class="arctic_scroll">menu05</a>	
+			<a href="#c06" title="" class="arctic_scroll">menu06</a>	
+		</header>
+		
+<!--		section>article*6 -->
+		<section>
+			<article id="visual">
+					원페이지 레이아웃 만들기(arctic스크롤 플러그인)<br>
+						1. arctic_scroll.js파일을 연결한다.<br>
+						2. 메뉴에 각각 href=#아이디명 class="arctic_scroll" 작성<br>
+						3. 스크립트 소스를 작성하여 body아래삽입<br>
+				<pre>
+					$(function(){
+						 $(".arctic_scroll").arctic_scroll({
+									speed: 800
+							 });
+					 });
+         </pre>
+			</article>
+			<article id="c01"></article>
+			<article id="c02"></article>
+			<article id="c03"></article>
+			<article id="c04"></article>
+			<article id="c05"></article>
+			<article id="c06"></article>
+		</section>
+		
+		<footer>푸터영역</footer>
+				
+		<script>
+			$(function(){
+			 $(".arctic_scroll").arctic_scroll({
+						speed: 800
+			 });
+			});
+		</script>	
+		
+</body>
+</html>
